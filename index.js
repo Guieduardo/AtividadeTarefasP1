@@ -141,9 +141,9 @@ let [tarefaNoite, setTarefaNoite] = useState ([
                         keyExtractor={(item) => item.id} //Looping para ver os itens por id
                         //horizontal ={true}
                         renderItem={(({item}) => //Para cada item que ele encontrar na lista de itens, mostre o botão com a descrição
-                            <View style={styles.botaoFilme}>
+                            <View style={styles.botaoAdd}>
                                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                                    <Text style={styles.textoBotaoFilme}>{item.descricao}</Text>
+                                    <Text style={styles.textoBotaoAdd}>{item.descricao}</Text>
                                     <TouchableOpacity onPress={()=> deletarTarefaComercial(item.id)}>
                                     <Ionicons name="checkmark-done-circle-outline" size={24} color="white" />
                                     </TouchableOpacity>
@@ -175,9 +175,9 @@ let [tarefaNoite, setTarefaNoite] = useState ([
                 keyExtractor={(item) => item.id} 
                 //horizontal ={true}
                 renderItem={(({item}) => 
-                    <View style={styles.botaoFilme}>
+                    <View style={styles.botaoAdd}>
                         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                            <Text style={styles.textoBotaoFilme}>{item.descricao}</Text>
+                            <Text style={styles.textoBotaoAdd}>{item.descricao}</Text>
                             <TouchableOpacity onPress={()=> deletarTarefaNoite(item.id)}>
                             <Ionicons name="checkmark-done-circle-outline" size={24} color="white" />
                             </TouchableOpacity>
@@ -249,13 +249,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
 
-    botaoFilme:{
+    botaoAdd:{
         backgroundColor: '#696969',
         padding: 15,
         marginBottom: 10
     },
 
-    textoBotaoFilme:{
+    textoBotaoAdd:{
         color: '#00bfff',
         fontSize: 22,
         fontWeight: 'bold'
@@ -265,8 +265,6 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 1,
         marginTop: 20
-        
-
     },
 
     tarefas:{
